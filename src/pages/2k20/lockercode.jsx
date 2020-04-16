@@ -8,7 +8,7 @@ function LockerCodePage() {
   const fetchCodes = () => {
     Taro.showLoading({ title: "loading" });
     Taro.request({
-      url: "http://linyu.dynv6.net:10010/ocr/image2en",
+      url: "http://linyu.dynv6.net:10010/ocr/nba2k20code",
       success: res => {
         setImages(res.data);
         Taro.hideLoading();
@@ -44,19 +44,24 @@ function LockerCodePage() {
       <ScrollView
         scrollY
         style={{
-          height: "calc(100vh - 50px)",
-          marginTop: '50px'
+          marginTop: "46px"
         }}
       >
         {images.map((img, i) => {
           return (
-            <Image
+            <View
               key={i}
-              src={img}
               style={{
-                width: '100%'
+                textAlign: "center"
               }}
-            />
+            >
+              <Image
+                src={img}
+                style={{
+                  maxWidth: "100%"
+                }}
+              />
+            </View>
           );
         })}
       </ScrollView>

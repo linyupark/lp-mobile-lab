@@ -22,7 +22,8 @@ class App extends Component {
   config = {
     pages: [
       'pages/index/index',
-      'pages/2k20/lockercode'
+      'pages/2k20/lockercode',
+      'pages/epic/free'
     ],
     window: {
       backgroundTextStyle: 'light',

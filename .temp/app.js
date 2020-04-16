@@ -44,7 +44,7 @@ class App extends Component {
   componentDidCatchError() {}
 
   config = {
-    pages: ["/pages/index/index", "/pages/2k20/lockercode"],
+    pages: ["/pages/index/index", "/pages/2k20/lockercode", "/pages/epic/free"],
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
@@ -62,6 +62,10 @@ class App extends Component {
     }, {
       path: '/pages/2k20/lockercode',
       componentLoader: () => import( /* webpackChunkName: "2k20_lockercode" */'./pages/2k20/lockercode'),
+      isIndex: false
+    }, {
+      path: '/pages/epic/free',
+      componentLoader: () => import( /* webpackChunkName: "epic_free" */'./pages/epic/free'),
       isIndex: false
     }]} customRoutes={{}} />;
   }
