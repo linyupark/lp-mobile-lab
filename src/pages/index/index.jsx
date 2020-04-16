@@ -4,7 +4,6 @@ import { AtGrid } from "taro-ui";
 import HeaderNavBar from "@/common/navbar/header";
 import styles from "./index.module.scss";
 
-
 function IndexPage() {
   const onGridClick = (item, index) => {
     const urls = ["/pages/2k20/lockercode", "/pages/epic/free"];
@@ -15,7 +14,12 @@ function IndexPage() {
 
   return (
     <View className={styles.indexPage}>
-      <HeaderNavBar title='LP.福利社' />
+      <HeaderNavBar title='忆游GMemory' />
+      <View
+        style={{
+          marginTop: Taro.getEnv() === "WEAPP" ? "0px" : "46px"
+        }}
+      ></View>
       <AtGrid
         hasBorder={false}
         onClick={onGridClick}
@@ -36,7 +40,7 @@ function IndexPage() {
 }
 
 IndexPage.config = {
-  navigationBarTitleText: 'LP.福利社'
+  navigationBarTitleText: "忆游GMemory"
 };
 
 export default IndexPage;
