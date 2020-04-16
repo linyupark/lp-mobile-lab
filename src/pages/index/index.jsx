@@ -1,5 +1,5 @@
 import Taro from "@tarojs/taro";
-import { View, Text } from "@tarojs/components";
+import { View } from "@tarojs/components";
 import { AtNavBar, AtGrid } from "taro-ui";
 
 function IndexPage() {
@@ -13,7 +13,7 @@ function IndexPage() {
 
   return (
     <View>
-      <AtNavBar color='#666' title='LP.Home' border />
+      <AtNavBar color='#666' title='LP.接口实验室' border />
       <AtGrid
         hasBorder={false}
         onClick={onGridClick}

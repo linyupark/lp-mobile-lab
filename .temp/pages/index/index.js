@@ -18,7 +18,7 @@ class IndexPage extends Taro.Component {
     };
 
     return <View>
-      <AtNavBar color="#666" title="LP.Home" border />
+      <AtNavBar color="#666" title="LP.接口实验室" border />
       <AtGrid hasBorder={false} onClick={onGridClick} data={[{
         image: "http://linyu.dynv6.net:9001/images/icons/icon-2k20.jpg",
         value: "2K20储物柜"

@@ -3,9 +3,11 @@ import Taro, { showLoading as _showLoading, request as _request, hideLoading as 
 import { View, Image, ScrollView } from "@tarojs/components";
 import { AtNavBar } from "taro-ui";
 
+const Title = "LP.2K20储物柜";
+
 class LockerCodePage extends Taro.Component {
   config = {
-    navigationBarTitleText: "2K20储物柜"
+    navigationBarTitleText: Title
   };
 
   render() {
@@ -39,7 +41,7 @@ class LockerCodePage extends Taro.Component {
     }, []);
 
     return <View>
-      <AtNavBar color="#666" title="LP.2K20储物柜" leftIconType="chevron-left" onClickLeftIcon={onBack} fixed />
+      <AtNavBar color="#666" title={Title} leftIconType="chevron-left" onClickLeftIcon={onBack} fixed />
       <ScrollView scrollY style={{
         marginTop: "46px"
       }}>
@@ -70,6 +72,6 @@ class LockerCodePage extends Taro.Component {
 
 }
 
-LockerCodePage.config = { navigationBarTitleText: "2K20储物柜" };
+LockerCodePage.config = { navigationBarTitleText: Title };
 
 export default LockerCodePage;

@@ -2,6 +2,8 @@ import Taro, { useState, useEffect } from "@tarojs/taro";
 import { View, Image, ScrollView } from "@tarojs/components";
 import { AtNavBar } from "taro-ui";
 
+const Title = "LP.2K20储物柜";
+
 function LockerCodePage() {
   const [images, setImages] = useState([]);
 
@@ -36,7 +38,7 @@ function LockerCodePage() {
     <View>
       <AtNavBar
         color='#666'
-        title='LP.2K20储物柜'
+        title={Title}
         leftIconType='chevron-left'
         onClickLeftIcon={onBack}
         fixed
@@ -70,7 +72,7 @@ function LockerCodePage() {
 }
 
 LockerCodePage.config = {
-  navigationBarTitleText: "2K20储物柜"
+  navigationBarTitleText: Title
 };
 
 export default LockerCodePage;
