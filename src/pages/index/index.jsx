@@ -1,19 +1,19 @@
 import Taro from "@tarojs/taro";
 import { View } from "@tarojs/components";
 import { AtNavBar, AtGrid } from "taro-ui";
+import styles from './index.scss'
 
 function IndexPage() {
   const onGridClick = (item, index) => {
     const urls = ["/pages/2k20/lockercode", "/pages/epic/free"]
-    console.log(index)
     Taro.navigateTo({
       url: urls[index]
     });
   };
 
   return (
-    <View>
-      <AtNavBar color='#666' title='LP.接口实验室' border />
+    <View className={styles.indexPage}>
+      <AtNavBar color='#666' title='LP.福利社' border />
       <AtGrid
         hasBorder={false}
         onClick={onGridClick}
