@@ -1,7 +1,9 @@
 import Taro from "@tarojs/taro";
 import { View } from "@tarojs/components";
 import { AtNavBar, AtGrid } from "taro-ui";
-import styles from './index.scss'
+import styles from './index.module.scss'
+
+console.log(styles.indexPage)
 
 function IndexPage() {
   const onGridClick = (item, index) => {
