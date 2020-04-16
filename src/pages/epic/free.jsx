@@ -1,8 +1,7 @@
 import Taro, { useState, useEffect } from "@tarojs/taro";
 import { View, Image, ScrollView, Text } from "@tarojs/components";
-import { AtNavBar, AtCard } from "taro-ui";
-
-const Title = "LP.EPIC免费游戏";
+import { AtCard } from "taro-ui";
+import HeaderNavBar from "@/common/navbar/header";
 
 function FreeGamesPage() {
   const [games, setGames] = useState([]);
@@ -26,10 +25,6 @@ function FreeGamesPage() {
     });
   };
 
-  const onBack = () => {
-    Taro.navigateBack();
-  };
-
   const checkDetail = (game) => {
     Taro.navigateTo({
       url: game.detailUrl
@@ -42,23 +37,17 @@ function FreeGamesPage() {
 
   return (
     <View>
-      <AtNavBar
-        color='#666'
-        title={Title}
-        leftIconType='chevron-left'
-        onClickLeftIcon={onBack}
-        fixed
-      />
+      <HeaderNavBar title='EPIC免费游戏' showBack />
       <ScrollView
         scrollY
         style={{
-          marginTop: "46px"
+          marginTop: Taro.getEnv() === "WEAPP" ? '0px' : "46px"
         }}
       >
-        {games.map((game, i) => {
+        {games.map((game) => {
           return (
             <View
-              key={i}
+              key={game.title}
               style={{
                 textAlign: "center",
                 margin: "10px auto"
@@ -89,7 +78,7 @@ function FreeGamesPage() {
 }
 
 FreeGamesPage.config = {
-  navigationBarTitleText: Title
+  navigationBarTitleText: 'EPIC免费游戏'
 };
 
 export default FreeGamesPage;

@@ -1,8 +1,6 @@
 import Taro, { useState, useEffect } from "@tarojs/taro";
 import { View, Image, ScrollView } from "@tarojs/components";
-import { AtNavBar } from "taro-ui";
-
-const Title = "LP.2K20储物柜";
+import HeaderNavBar from "@/common/navbar/header";
 
 function LockerCodePage() {
   const [images, setImages] = useState([]);
@@ -26,33 +24,23 @@ function LockerCodePage() {
     });
   };
 
-  const onBack = () => {
-    Taro.navigateBack();
-  };
-
   useEffect(() => {
     fetchCodes();
   }, []);
 
   return (
     <View>
-      <AtNavBar
-        color='#666'
-        title={Title}
-        leftIconType='chevron-left'
-        onClickLeftIcon={onBack}
-        fixed
-      />
+      <HeaderNavBar title='2K20储物柜' showBack />
       <ScrollView
         scrollY
         style={{
-          marginTop: "46px"
+          marginTop: Taro.getEnv() === "WEAPP" ? '0px' : "46px"
         }}
       >
         {images.map((img, i) => {
           return (
             <View
-              key={i}
+              key={`i_${i}`}
               style={{
                 textAlign: "center"
               }}
@@ -72,7 +60,7 @@ function LockerCodePage() {
 }
 
 LockerCodePage.config = {
-  navigationBarTitleText: Title
+  navigationBarTitleText: '2K20储物柜'
 };
 
 export default LockerCodePage;
