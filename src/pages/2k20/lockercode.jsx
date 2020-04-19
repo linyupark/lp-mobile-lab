@@ -8,7 +8,7 @@ function LockerCodePage() {
   const fetchCodes = () => {
     Taro.showLoading({ title: "loading" });
     Taro.request({
-      url: "http://linyu.dynv6.net:10010/ocr/nba2k20code",
+      url: "https://service-reyif0lj-1259108732.sh.apigw.tencentcs.com/release/nba2k20code",
       success: res => {
         setImages(res.data);
         Taro.hideLoading();

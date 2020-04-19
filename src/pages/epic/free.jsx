@@ -9,7 +9,7 @@ function FreeGamesPage() {
   const fetchData = () => {
     Taro.showLoading({ title: "loading" });
     Taro.request({
-      url: "http://linyu.dynv6.net:10010/ocr/epic-freegames",
+      url: "https://service-reyif0lj-1259108732.sh.apigw.tencentcs.com/release/epic-freegames",
       success: res => {
         setGames(res.data);
         Taro.hideLoading();
