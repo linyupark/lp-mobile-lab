@@ -8,7 +8,8 @@ function LockerCodePage() {
   const fetchCodes = () => {
     Taro.showLoading({ title: "loading" });
     Taro.request({
-      url: "https://service-reyif0lj-1259108732.sh.apigw.tencentcs.com/release/nba2k20code",
+      url:
+        "https://service-reyif0lj-1259108732.sh.apigw.tencentcs.com/release/nba2k20code",
       success: res => {
         setImages(res.data);
         Taro.hideLoading();
@@ -34,9 +35,13 @@ function LockerCodePage() {
       <ScrollView
         scrollY
         style={{
-          marginTop: Taro.getEnv() === "WEAPP" ? '0px' : "46px"
+          marginTop: Taro.getEnv() === "WEAPP" ? "0px" : "46px"
         }}
       >
+        <View className='at-article__p' style={{
+          textAlign: 'center',
+        }}
+        >数据来源官方推特，每日凌晨更新</View>
         {images.map((img, i) => {
           return (
             <View
@@ -60,7 +65,7 @@ function LockerCodePage() {
 }
 
 LockerCodePage.config = {
-  navigationBarTitleText: '2K20储物柜'
+  navigationBarTitleText: "2K20储物柜"
 };
 
 export default LockerCodePage;

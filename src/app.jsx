@@ -23,7 +23,8 @@ class App extends Component {
     pages: [
       'pages/index/index',
       'pages/2k20/lockercode',
-      'pages/epic/free'
+      'pages/epic/free',
+      'pages/steam/free'
     ],
     window: {
       backgroundTextStyle: 'light',

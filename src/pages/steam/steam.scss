@@ -1,0 +1,25 @@
+.steam-freegames {
+  .card-container {
+    margin: 20px auto;
+    text-align: center;
+    .image {
+      width: 214px;
+      height: 80px;
+    }
+    .p {
+      padding: 20px 0 0;
+      text-align: center;
+      display: block;
+      font-size: 32px;
+      .green, .red {
+        color: green;
+        opacity: .8;
+        margin-right: 5px;
+        font-size: 28px;
+      }
+      .red {
+        color: red;
+      }
+    }
+  }
+}
